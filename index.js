@@ -21,7 +21,7 @@ express()
   .listen(PORT, () => console.log(`Listening on ${PORT}`));
 
 async function getPlayedTime(key, steamId) {
-  const url = `http://api.steampowered.com/IPlayerService/GetOwnedGamess/v0001?key=${key}&format=json&input_json={%22steamid%22:%20${steamId},%22appids_filter%22:%20[381210]}`;
+  const url = `http://api.steampowered.com/IPlayerService/GetOwnedGames/v0001?key=${key}&format=json&input_json={%22steamid%22:%20${steamId},%22appids_filter%22:%20[381210]}`;
 
    return fetch(url)
     .then((res) => res.json())
